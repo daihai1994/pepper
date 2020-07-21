@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhongbenshuo.pepper.mapper.PepperMapper">
+    <select id="queryPersonnelStatus" resultType="PersonnelStatusInfo">select top 1 userInfo.user_name as name,
+       attendance_type,
+       out_attendance,
+       CONVERT(VARCHAR(100),attendance_time,100) AS attendance_time,
+       attendance_address,
+       AttendanceRule.rule_name as ruleName
+        from  userInfo
+        LEFT JOIN AttendanceRecord on AttendanceRecord.user_id = userInfo.user_id
+        left join AttendanceRule on AttendanceRecord.rule_id = AttendanceRule.id
+				where dbo.fn_GetPinyin(userInfo.user_name)  = #{name}
+          ORDER BY AttendanceRecord.attendance_time desc
+    </select>
+
+    <select id="queryPersonnelPhone" resultType="String">
+        select phone_number from userInfo where dbo.fn_GetPinyin(user_name)  = #{name}
+</select>
+
+    <select id="queryPersonnelEmail" resultType="String">
+        select mail_address from userInfo  where dbo.fn_GetPinyin(user_name)  = #{name}
+    </select>
+
+    <select id="queryPepperBusiness" resultType="PepperPicture">
+        select * from PepperBusinessScope order by sort
+    </select>
+
+    <select id="queryPepperCompany" resultType="PepperPicture">
+        select * from PepperCompanyProfile order by sort
+    </select>
+
+    <select id="queryPepperProject" resultType="PepperPicture">
+        select * from PepperEngineeringCases order by sort
+    </select>
+
+    <select id="querySelfIntroduction" resultType="String">
+        select information from PepperSelfInfoAndAsk where type = 1
+    </select>
+
+    <select id="queryAskSentence" resultType="String">
+        select information from PepperSelfInfoAndAsk where type = 2
+    </select>
+
+</mapper>
