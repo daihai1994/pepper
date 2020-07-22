@@ -34,12 +34,9 @@ public class PepperServiceImpl implements PepperService {
             if (personnelStatusInfo !=null && personnelStatusInfo.size()>0) {
                 result.setCode(ErrorCode.SUCCESS);
                 result.setData(personnelStatusInfo);
-            } else if(personnelStatusInfo==null||personnelStatusInfo.size()==0) {
+            } else {
                 result.setCode(ErrorCode.NODATA);
                 result.setData("没有查询到"+name+"的信息");
-            }else{
-                result.setCode(ErrorCode.FAIL);
-                result.setData("查询失败");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,12 +55,9 @@ public class PepperServiceImpl implements PepperService {
             if (resultData!=null &&resultData.size()>0) {
                 result.setCode(ErrorCode.SUCCESS);
                 result.setData(resultData);
-            } else if(resultData==null ||resultData.size()==0) {
+            } else {
                 result.setCode(ErrorCode.NODATA);
                 result.setData("没有查询到手机号");
-            }else{
-                result.setCode(ErrorCode.FAIL);
-                result.setData("查询失败");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -82,12 +76,9 @@ public class PepperServiceImpl implements PepperService {
             if (resultData!=null &&resultData.size()>0) {
                 result.setCode(ErrorCode.SUCCESS);
                 result.setData(resultData);
-            } else if(resultData==null ||resultData.size()==0) {
+            } else {
                 result.setCode(ErrorCode.NODATA);
                 result.setData("没有查询到邮箱");
-            }else{
-                result.setCode(ErrorCode.FAIL);
-                result.setData("查询失败");
             }
         } catch (Exception e) {
             e.printStackTrace();
