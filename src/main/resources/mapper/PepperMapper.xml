@@ -10,16 +10,16 @@
         from  userInfo
         LEFT JOIN AttendanceRecord on AttendanceRecord.user_id = userInfo.user_id
         left join AttendanceRule on AttendanceRecord.rule_id = AttendanceRule.id
-				where dbo.fn_GetPinyin(userInfo.user_name)  = #{name}
+				where dbo.procGetPY(userInfo.user_name)  = #{name}
           ORDER BY AttendanceRecord.attendance_time desc
     </select>
 
-    <select id="queryPersonnelPhone" resultType="String">
-        select phone_number from userInfo where dbo.fn_GetPinyin(user_name)  = #{name}
+    <select id="queryPersonnelPhone" resultType="ResultData">
+        select phone_number as msg,user_name as name from userInfo where dbo.procGetPY(user_name)  = #{name}
 </select>
 
-    <select id="queryPersonnelEmail" resultType="String">
-        select mail_address from userInfo  where dbo.fn_GetPinyin(user_name)  = #{name}
+    <select id="queryPersonnelEmail" resultType="ResultData">
+        select mail_address as msg,user_name as name from userInfo  where dbo.procGetPY(user_name)  = #{name}
     </select>
 
     <select id="queryPepperBusiness" resultType="PepperPicture">

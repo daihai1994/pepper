@@ -1,12 +1,8 @@
 package com.zhongbenshuo.pepper.service.impl;
 
-import com.zhongbenshuo.pepper.model.ErrorCode;
-import com.zhongbenshuo.pepper.model.PepperPicture;
-import com.zhongbenshuo.pepper.model.Result;
+import com.zhongbenshuo.pepper.model.*;
 import com.zhongbenshuo.pepper.mapper.PepperMapper;
-import com.zhongbenshuo.pepper.model.PersonnelStatusInfo;
 import com.zhongbenshuo.pepper.service.PepperService;
-import com.zhongbenshuo.pepper.utils.PinYinUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
@@ -34,11 +30,11 @@ public class PepperServiceImpl implements PepperService {
     public Result queryPersonnelStatus(String name) {
         Result result = new Result();
         try {
-            PersonnelStatusInfo personnelStatusInfo = pepperMapper.queryPersonnelStatus(name);
-            if (personnelStatusInfo !=null && StringUtils.isNotEmpty(personnelStatusInfo.getName())) {
+            List<PersonnelStatusInfo> personnelStatusInfo = pepperMapper.queryPersonnelStatus(name);
+            if (personnelStatusInfo !=null && personnelStatusInfo.size()>0) {
                 result.setCode(ErrorCode.SUCCESS);
                 result.setData(personnelStatusInfo);
-            } else if(personnelStatusInfo==null||StringUtils.isEmpty(personnelStatusInfo.getName())) {
+            } else if(personnelStatusInfo==null||personnelStatusInfo.size()==0) {
                 result.setCode(ErrorCode.NODATA);
                 result.setData("没有查询到"+name+"的信息");
             }else{
@@ -58,13 +54,13 @@ public class PepperServiceImpl implements PepperService {
     public Result queryPersonnelPhone(String name) {
         Result result = new Result();
         try {
-            String phone = pepperMapper.queryPersonnelPhone(name);
-            if (StringUtils.isNotEmpty(phone)) {
+            List<ResultData> resultData = pepperMapper.queryPersonnelPhone(name);
+            if (resultData!=null &&resultData.size()>0) {
                 result.setCode(ErrorCode.SUCCESS);
-                result.setData(phone);
-            } else if(StringUtils.isEmpty(phone)) {
+                result.setData(resultData);
+            } else if(resultData==null ||resultData.size()==0) {
                 result.setCode(ErrorCode.NODATA);
-                result.setData("没有查询到"+name+"的手机号");
+                result.setData("没有查询到手机号");
             }else{
                 result.setCode(ErrorCode.FAIL);
                 result.setData("查询失败");
@@ -82,13 +78,13 @@ public class PepperServiceImpl implements PepperService {
     public Result queryPersonnelEmail(String name) {
         Result result = new Result();
         try {
-            String email = pepperMapper.queryPersonnelEmail(name);
-            if (StringUtils.isNotEmpty(email)) {
+            List<ResultData> resultData = pepperMapper.queryPersonnelEmail(name);
+            if (resultData!=null &&resultData.size()>0) {
                 result.setCode(ErrorCode.SUCCESS);
-                result.setData(email);
-            } else if(StringUtils.isEmpty(email)) {
+                result.setData(resultData);
+            } else if(resultData==null ||resultData.size()==0) {
                 result.setCode(ErrorCode.NODATA);
-                result.setData("没有查询到"+name+"的邮箱");
+                result.setData("没有查询到邮箱");
             }else{
                 result.setCode(ErrorCode.FAIL);
                 result.setData("查询失败");

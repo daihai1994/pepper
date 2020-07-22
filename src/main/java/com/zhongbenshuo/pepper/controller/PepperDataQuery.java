@@ -34,7 +34,7 @@ public class PepperDataQuery {
     @RequestMapping("/queryPersonnelStatus")
     public Result queryPersonnelStatus(String name){
         log.info("查询人员状态："+name);
-        name = PinYinUtil.ToPinyin(name);
+        name = PinYinUtil.ToFirstChar(name);
         log.info("查询人员状态："+name);
         return pepperService.queryPersonnelStatus(name);
     }
@@ -43,7 +43,7 @@ public class PepperDataQuery {
     @RequestMapping("/queryPersonnelPhone")
     public Result queryPersonnelPhone(String name){
         log.info("查询人员手机号："+name);
-        name = PinYinUtil.ToPinyin(name);
+        name = PinYinUtil.ToFirstChar(name);
         log.info("查询人员状态："+name);
         return pepperService.queryPersonnelPhone(name);
     }
@@ -52,7 +52,7 @@ public class PepperDataQuery {
     @RequestMapping("/queryPersonnelEmail")
     public Result queryPersonnelEmail(String name){
         log.info("查询人员邮箱："+name);
-        name = PinYinUtil.ToPinyin(name);
+        name = PinYinUtil.ToFirstChar(name);
         log.info("查询人员状态："+name);
         return pepperService.queryPersonnelEmail(name);
     }
