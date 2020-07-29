@@ -93,4 +93,12 @@ public class PepperDataQuery {
         return pepperService.queryAskSentence();
     }
 
+    @ApiOperation(value = "查询环境检测仪数据",notes = "查询环境检测仪数据")
+    @RequestMapping("/queryEnvironment")
+    public Result queryEnvironment(String station,String type){
+        log.info("查询环境检测仪数据");
+        return pepperService.queryEnvironment(station,type);
+    }
+
+
 }

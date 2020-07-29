@@ -1,216 +1,166 @@
-2020-07-22 09:03:22.604  INFO 17984 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 17984 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
-2020-07-22 09:03:22.624  INFO 17984 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
-2020-07-22 09:03:25.509  INFO 17984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-07-22 09:03:25.543  INFO 17984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 JPA repository interfaces.
-2020-07-22 09:03:26.287  INFO 17984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2020-07-22 09:03:26.300  INFO 17984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-22 09:03:26.301  INFO 17984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-07-22 09:03:26.548  INFO 17984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-22 09:03:26.548  INFO 17984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3782 ms
-2020-07-22 09:03:26.837  INFO 17984 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-07-22 09:03:28.663  INFO 17984 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-07-22 09:03:28.774  INFO 17984 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-22 09:03:28.844  INFO 17984 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-07-22 09:03:28.967  INFO 17984 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-07-22 09:03:29.277  INFO 17984 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-07-22 09:03:29.410  WARN 17984 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-07-22 09:03:29.550  INFO 17984 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
-2020-07-22 09:03:29.891  WARN 17984 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-07-22 09:03:30.037  INFO 17984 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-07-22 09:03:30.058  INFO 17984 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-07-22 09:03:30.383  INFO 17984 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-07-22 09:03:30.545  INFO 17984 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2020-07-22 09:03:30.659  INFO 17984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2020-07-22 09:03:30.662  INFO 17984 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-07-22 09:03:30.663  INFO 17984 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-07-22 09:03:30.687  INFO 17984 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 9.461 seconds (JVM running for 16.442)
-2020-07-22 09:03:30.697  INFO 17984 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
-2020-07-22 09:03:31.178  INFO 17984 --- [RMI TCP Connection(3)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-22 09:03:31.179  INFO 17984 --- [RMI TCP Connection(3)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-22 09:03:31.191  INFO 17984 --- [RMI TCP Connection(3)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2020-07-22 09:03:35.858  WARN 17984 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8082/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8082/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8082/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
-2020-07-22 09:28:24.147  INFO 17984 --- [http-nio-8082-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询公司经营图片
-2020-07-22 09:28:24.147  INFO 17984 --- [http-nio-8082-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询公司工程案例图片
-2020-07-22 09:28:24.147  INFO 17984 --- [http-nio-8082-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询公司简介图片
-2020-07-22 09:28:24.147  INFO 17984 --- [http-nio-8082-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询自我介绍
-2020-07-22 09:35:16.038  INFO 18808 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 18808 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
-2020-07-22 09:35:16.046  INFO 18808 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
-2020-07-22 09:35:18.411  INFO 18808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-07-22 09:35:18.451  INFO 18808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 JPA repository interfaces.
-2020-07-22 09:35:19.247  INFO 18808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2020-07-22 09:35:19.257  INFO 18808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-22 09:35:19.258  INFO 18808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-07-22 09:35:19.544  INFO 18808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-22 09:35:19.545  INFO 18808 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3375 ms
-2020-07-22 09:35:19.800  INFO 18808 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-07-22 09:35:21.408  INFO 18808 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-07-22 09:35:21.732  INFO 18808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-22 09:35:21.788  INFO 18808 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-07-22 09:35:21.864  INFO 18808 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-07-22 09:35:22.094  INFO 18808 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-07-22 09:35:22.221  WARN 18808 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-07-22 09:35:22.262  INFO 18808 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
-2020-07-22 09:35:22.677  INFO 18808 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-07-22 09:35:22.686  WARN 18808 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-07-22 09:35:22.690  INFO 18808 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-07-22 09:35:22.995  INFO 18808 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-07-22 09:35:23.101  INFO 18808 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2020-07-22 09:35:23.179  INFO 18808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2020-07-22 09:35:23.182  INFO 18808 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-07-22 09:35:23.182  INFO 18808 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-07-22 09:35:23.208  INFO 18808 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 8.487 seconds (JVM running for 15.473)
-2020-07-22 09:35:23.220  INFO 18808 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
-2020-07-22 09:35:23.834  INFO 18808 --- [RMI TCP Connection(1)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-22 09:35:23.834  INFO 18808 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-22 09:35:23.848  INFO 18808 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2020-07-22 09:35:28.366  WARN 18808 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8888/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8888/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8888/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
-2020-07-22 09:40:45.232  INFO 10436 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 10436 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
-2020-07-22 09:40:45.242  INFO 10436 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
-2020-07-22 09:40:47.878  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-07-22 09:40:47.914  INFO 10436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 JPA repository interfaces.
-2020-07-22 09:40:48.675  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2020-07-22 09:40:48.686  INFO 10436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-22 09:40:48.687  INFO 10436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-07-22 09:40:48.898  INFO 10436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-22 09:40:48.898  INFO 10436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3481 ms
-2020-07-22 09:40:49.131  INFO 10436 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-07-22 09:40:50.835  INFO 10436 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-07-22 09:40:51.151  INFO 10436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-22 09:40:51.209  INFO 10436 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-07-22 09:40:51.278  INFO 10436 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-07-22 09:40:51.514  INFO 10436 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-07-22 09:40:51.699  WARN 10436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-07-22 09:40:51.740  INFO 10436 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
-2020-07-22 09:40:52.045  WARN 10436 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-07-22 09:40:52.365  INFO 10436 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-07-22 09:40:52.731  INFO 10436 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-07-22 09:40:52.743  INFO 10436 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-07-22 09:40:52.818  INFO 10436 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2020-07-22 09:40:52.905  INFO 10436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2020-07-22 09:40:52.909  INFO 10436 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-07-22 09:40:52.910  INFO 10436 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-07-22 09:40:52.934  INFO 10436 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 8.921 seconds (JVM running for 15.749)
-2020-07-22 09:40:52.951  INFO 10436 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
-2020-07-22 09:40:53.191  INFO 10436 --- [RMI TCP Connection(1)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-22 09:40:53.191  INFO 10436 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-22 09:40:53.203  INFO 10436 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2020-07-22 09:40:58.109  WARN 10436 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8888/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8888/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8888/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
-2020-07-22 09:41:54.656  INFO 10436 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员邮箱：代海
-2020-07-22 09:41:54.675  INFO 10436 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dai hai
-2020-07-22 09:42:05.046  INFO 10436 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询自我介绍
-2020-07-22 09:42:13.006  INFO 10436 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询询问语句
-2020-07-22 09:43:31.416  INFO 10436 --- [http-nio-8888-exec-10] c.z.pepper.controller.PepperDataQuery    : 查询公司简介图片
-2020-07-22 09:43:31.416  INFO 10436 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询公司经营图片
-2020-07-22 09:43:31.416  INFO 10436 --- [http-nio-8888-exec-9] c.z.pepper.controller.PepperDataQuery    : 查询公司工程案例图片
-2020-07-22 09:43:31.418  INFO 10436 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询自我介绍
-2020-07-22 09:45:17.374  INFO 10436 --- [http-nio-8888-exec-10] c.z.pepper.controller.PepperDataQuery    : 查询公司简介图片
-2020-07-22 09:45:17.374  INFO 10436 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询公司工程案例图片
-2020-07-22 09:45:17.375  INFO 10436 --- [http-nio-8888-exec-6] c.z.pepper.controller.PepperDataQuery    : 查询自我介绍
-2020-07-22 09:45:17.375  INFO 10436 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询公司经营图片
-2020-07-22 09:47:03.856  INFO 10436 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询公司工程案例图片
-2020-07-22 09:47:03.856  INFO 10436 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询公司经营图片
-2020-07-22 09:47:03.856  INFO 10436 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询询问语句
-2020-07-22 09:47:03.856  INFO 10436 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询公司简介图片
-2020-07-22 09:47:03.869  INFO 10436 --- [http-nio-8888-exec-6] c.z.pepper.controller.PepperDataQuery    : 查询自我介绍
-2020-07-22 09:47:35.119  INFO 10436 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询询问语句
-2020-07-22 09:54:48.799  INFO 10436 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询询问语句
-2020-07-22 09:54:48.996  INFO 10436 --- [http-nio-8888-exec-10] c.z.pepper.controller.PepperDataQuery    : 查询公司简介图片
-2020-07-22 09:54:49.035  INFO 10436 --- [http-nio-8888-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询公司经营图片
-2020-07-22 09:54:49.035  INFO 10436 --- [http-nio-8888-exec-9] c.z.pepper.controller.PepperDataQuery    : 查询公司工程案例图片
-2020-07-22 09:54:49.066  INFO 10436 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询自我介绍
-2020-07-22 10:04:43.349  INFO 11700 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 11700 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
-2020-07-22 10:04:43.356  INFO 11700 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
-2020-07-22 10:04:45.845  INFO 11700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-07-22 10:04:45.881  INFO 11700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 JPA repository interfaces.
-2020-07-22 10:04:46.713  INFO 11700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2020-07-22 10:04:46.724  INFO 11700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-22 10:04:46.725  INFO 11700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-07-22 10:04:47.087  INFO 11700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-22 10:04:47.087  INFO 11700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3561 ms
-2020-07-22 10:04:47.466  INFO 11700 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-07-22 10:04:50.935  INFO 11700 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-07-22 10:04:51.140  INFO 11700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-22 10:04:51.275  INFO 11700 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-07-22 10:04:51.441  INFO 11700 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-07-22 10:04:51.703  INFO 11700 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-07-22 10:04:51.978  WARN 11700 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-07-22 10:04:52.016  INFO 11700 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
-2020-07-22 10:04:52.381  WARN 11700 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-07-22 10:04:52.652  INFO 11700 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-07-22 10:04:52.665  INFO 11700 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-07-22 10:04:52.803  INFO 11700 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-07-22 10:04:52.915  INFO 11700 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2020-07-22 10:04:52.990  INFO 11700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2020-07-22 10:04:52.992  INFO 11700 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-07-22 10:04:52.993  INFO 11700 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-07-22 10:04:53.013  INFO 11700 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 10.861 seconds (JVM running for 18.278)
-2020-07-22 10:04:53.020  INFO 11700 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
-2020-07-22 10:04:55.001  INFO 11700 --- [RMI TCP Connection(3)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-22 10:04:55.001  INFO 11700 --- [RMI TCP Connection(3)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-22 10:04:55.013  INFO 11700 --- [RMI TCP Connection(3)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2020-07-22 10:04:58.244  WARN 11700 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8888/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8888/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8888/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
-2020-07-22 10:09:44.879  INFO 11700 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:09:44.895  INFO 11700 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:10:00.717  INFO 11700 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:10:00.718  INFO 11700 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:10:09.022  INFO 11700 --- [http-nio-8888-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：大海
-2020-07-22 10:10:09.022  INFO 11700 --- [http-nio-8888-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:20:20.966  INFO 11700 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：大海
-2020-07-22 10:20:20.966  INFO 11700 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:32:10.455  INFO 2732 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 2732 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
-2020-07-22 10:32:10.461  INFO 2732 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
-2020-07-22 10:32:12.933  INFO 2732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-07-22 10:32:12.971  INFO 2732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 JPA repository interfaces.
-2020-07-22 10:32:13.764  INFO 2732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2020-07-22 10:32:13.776  INFO 2732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-22 10:32:13.776  INFO 2732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2020-07-22 10:32:14.010  INFO 2732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-22 10:32:14.011  INFO 2732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3395 ms
-2020-07-22 10:32:14.262  INFO 2732 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-07-22 10:32:19.531  INFO 2732 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-07-22 10:32:19.637  INFO 2732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-07-22 10:32:19.695  INFO 2732 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-07-22 10:32:19.778  INFO 2732 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-2020-07-22 10:32:20.030  INFO 2732 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-07-22 10:32:20.202  WARN 2732 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-07-22 10:32:20.238  INFO 2732 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
-2020-07-22 10:32:20.704  WARN 2732 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-07-22 10:32:20.780  INFO 2732 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-07-22 10:32:20.795  INFO 2732 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-07-22 10:32:21.169  INFO 2732 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-07-22 10:32:21.299  INFO 2732 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2020-07-22 10:32:21.380  INFO 2732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2020-07-22 10:32:21.384  INFO 2732 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-07-22 10:32:21.385  INFO 2732 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-07-22 10:32:21.406  INFO 2732 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 12.304 seconds (JVM running for 19.497)
-2020-07-22 10:32:21.414  INFO 2732 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
-2020-07-22 10:32:21.527  INFO 2732 --- [RMI TCP Connection(2)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-22 10:32:21.527  INFO 2732 --- [RMI TCP Connection(2)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-22 10:32:21.543  INFO 2732 --- [RMI TCP Connection(2)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
-2020-07-22 10:32:26.686  WARN 2732 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8888/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8888/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8888/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
-2020-07-22 10:56:29.719  INFO 2732 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:56:29.736  INFO 2732 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:56:35.655  INFO 2732 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:56:35.656  INFO 2732 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:56:45.365  INFO 2732 --- [http-nio-8888-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:56:45.365  INFO 2732 --- [http-nio-8888-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:56:48.619  INFO 2732 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:56:48.619  INFO 2732 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:56:50.865  INFO 2732 --- [http-nio-8888-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:56:50.865  INFO 2732 --- [http-nio-8888-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:56:53.988  INFO 2732 --- [http-nio-8888-exec-6] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:56:53.988  INFO 2732 --- [http-nio-8888-exec-6] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 10:59:58.611  INFO 2732 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 10:59:58.612  INFO 2732 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 11:01:36.459  INFO 2732 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 11:01:36.459  INFO 2732 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 11:01:47.356  INFO 2732 --- [http-nio-8888-exec-9] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 11:01:47.356  INFO 2732 --- [http-nio-8888-exec-9] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 11:01:54.094  INFO 2732 --- [http-nio-8888-exec-10] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 11:01:54.094  INFO 2732 --- [http-nio-8888-exec-10] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 11:02:03.646  INFO 2732 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员手机号：代海
-2020-07-22 11:02:03.646  INFO 2732 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 11:02:08.857  INFO 2732 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询人员邮箱：代海
-2020-07-22 11:02:08.857  INFO 2732 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
-2020-07-22 11:02:13.348  INFO 2732 --- [http-nio-8888-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询人员邮箱：代海
-2020-07-22 11:02:13.348  INFO 2732 --- [http-nio-8888-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询人员状态：dh
+2020-07-24 13:38:19.635  INFO 4004 --- [main] c.z.pepper.PepperApplicationTests        : Starting PepperApplicationTests on DESKTOP-F2NLN99 with PID 4004 (started by daihai in E:\ideaWordSpace\pepper)
+2020-07-24 13:38:19.651  INFO 4004 --- [main] c.z.pepper.PepperApplicationTests        : No active profile set, falling back to default profiles: default
+2020-07-24 13:38:22.312  INFO 4004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-24 13:38:22.445  INFO 4004 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101ms. Found 0 JPA repository interfaces.
+2020-07-24 13:38:23.845  INFO 4004 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-07-24 13:38:33.649  INFO 4004 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-24 13:38:34.223  INFO 4004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-24 13:38:34.472  INFO 4004 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-24 13:38:34.728  INFO 4004 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-24 13:38:35.437  INFO 4004 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-24 13:38:35.958  INFO 4004 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-07-24 13:38:36.235  WARN 4004 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-24 13:38:37.029  INFO 4004 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-24 13:38:37.065  INFO 4004 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-24 13:38:38.310  WARN 4004 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-24 13:38:39.587  INFO 4004 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-07-24 13:38:40.651  INFO 4004 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-07-24 13:38:40.802  INFO 4004 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories��
+2020-07-24 13:38:40.804  INFO 4004 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-24 13:38:40.864  INFO 4004 --- [main] c.z.pepper.PepperApplicationTests        : Started PepperApplicationTests in 22.261 seconds (JVM running for 24.643)
+2020-07-24 13:38:40.935 ERROR 4004 --- [registrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:192) ~[spring-boot-admin-client-2.2.3.jar:2.2.3]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:104) ~[spring-boot-admin-client-2.2.3.jar:2.2.3]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:63) ~[spring-boot-admin-client-2.2.3.jar:2.2.3]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:76) ~[spring-boot-admin-client-2.2.3.jar:2.2.3]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:154) ~[spring-boot-admin-client-2.2.3.jar:2.2.3]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80) ~[spring-boot-admin-client-2.2.3.jar:2.2.3]
+	at de.codecentric.boot.admin.client.registration.ApplicationRegistrator.register(ApplicationRegistrator.java:58) ~[spring-boot-admin-client-2.2.3.jar:2.2.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_221]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+
+2020-07-24 13:38:41.375  INFO 4004 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-07-24 13:38:41.383  INFO 4004 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-07-24 13:38:41.390  INFO 4004 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-24 13:38:41.392  INFO 4004 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-07-24 13:38:41.407  INFO 4004 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-07-24 15:09:12.735  INFO 15440 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 15440 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
+2020-07-24 15:09:12.742  INFO 15440 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
+2020-07-24 15:09:14.968  INFO 15440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-24 15:09:15.007  INFO 15440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 JPA repository interfaces.
+2020-07-24 15:09:15.871  INFO 15440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-07-24 15:09:15.881  INFO 15440 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-24 15:09:15.881  INFO 15440 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-24 15:09:16.146  INFO 15440 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-24 15:09:16.146  INFO 15440 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3302 ms
+2020-07-24 15:09:16.444  INFO 15440 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-07-24 15:09:19.550  INFO 15440 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-24 15:09:19.662  INFO 15440 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-24 15:09:19.729  INFO 15440 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-24 15:09:19.815  INFO 15440 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-24 15:09:20.092  INFO 15440 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-24 15:09:20.252  WARN 15440 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-24 15:09:20.287  INFO 15440 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-07-24 15:09:20.664  WARN 15440 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-24 15:09:20.668  INFO 15440 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-24 15:09:20.681  INFO 15440 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-24 15:09:20.976  INFO 15440 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-07-24 15:09:21.160  INFO 15440 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-07-24 15:09:21.245  INFO 15440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-07-24 15:09:21.248  INFO 15440 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-24 15:09:21.249  INFO 15440 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-24 15:09:21.271  INFO 15440 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 9.721 seconds (JVM running for 17.53)
+2020-07-24 15:09:21.280  INFO 15440 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
+2020-07-24 15:09:21.946  INFO 15440 --- [RMI TCP Connection(1)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 15:09:21.947  INFO 15440 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-24 15:09:21.958  INFO 15440 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-07-24 15:09:26.414  WARN 15440 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8888/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8888/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8888/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
+2020-07-24 15:20:17.040  INFO 13180 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 13180 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
+2020-07-24 15:20:17.050  INFO 13180 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
+2020-07-24 15:20:19.240  INFO 13180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-24 15:20:19.280  INFO 13180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 JPA repository interfaces.
+2020-07-24 15:20:20.232  INFO 13180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-07-24 15:20:20.248  INFO 13180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-24 15:20:20.248  INFO 13180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-24 15:20:20.511  INFO 13180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-24 15:20:20.512  INFO 13180 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3317 ms
+2020-07-24 15:20:20.736  INFO 13180 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-07-24 15:20:22.426  INFO 13180 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-24 15:20:22.711  INFO 13180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-24 15:20:22.766  INFO 13180 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-24 15:20:22.828  INFO 13180 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-24 15:20:23.037  INFO 13180 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-24 15:20:23.169  WARN 13180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-24 15:20:23.202  INFO 13180 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-07-24 15:20:23.573  WARN 13180 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-24 15:20:23.713  INFO 13180 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-24 15:20:23.727  INFO 13180 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-24 15:20:23.915  INFO 13180 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-07-24 15:20:24.063  INFO 13180 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-07-24 15:20:24.191  INFO 13180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-07-24 15:20:24.195  INFO 13180 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-24 15:20:24.196  INFO 13180 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-24 15:20:24.225  INFO 13180 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 8.298 seconds (JVM running for 14.885)
+2020-07-24 15:20:24.235  INFO 13180 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
+2020-07-24 15:20:24.971  INFO 13180 --- [RMI TCP Connection(1)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 15:20:24.971  INFO 13180 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-24 15:20:24.980  INFO 13180 --- [RMI TCP Connection(1)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-24 15:20:29.431  WARN 13180 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8888/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8888/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8888/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
+2020-07-24 15:20:56.028  INFO 13180 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:21:21.729  INFO 13180 --- [http-nio-8888-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:21:58.469  INFO 13180 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:22:02.679  INFO 13180 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:22:23.106  INFO 13180 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:22:35.469  INFO 13180 --- [http-nio-8888-exec-6] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:24:36.785  INFO 13180 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:29:31.148  INFO 14688 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Starting PepperApplication on DESKTOP-F2NLN99 with PID 14688 (E:\ideaWordSpace\pepper\target\classes started by daihai in E:\ideaWordSpace\pepper)
+2020-07-24 15:29:31.154  INFO 14688 --- [main] c.zhongbenshuo.pepper.PepperApplication  : No active profile set, falling back to default profiles: default
+2020-07-24 15:29:33.429  INFO 14688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-24 15:29:33.475  INFO 14688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 JPA repository interfaces.
+2020-07-24 15:29:34.287  INFO 14688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2020-07-24 15:29:34.297  INFO 14688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-24 15:29:34.298  INFO 14688 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-24 15:29:34.522  INFO 14688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-24 15:29:34.522  INFO 14688 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3264 ms
+2020-07-24 15:29:34.777  INFO 14688 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-07-24 15:29:36.431  INFO 14688 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-24 15:29:36.525  INFO 14688 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-24 15:29:36.581  INFO 14688 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-24 15:29:36.652  INFO 14688 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-24 15:29:36.847  INFO 14688 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-24 15:29:36.978  WARN 14688 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-24 15:29:37.017  INFO 14688 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2020-07-24 15:29:37.298  WARN 14688 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-07-24 15:29:37.581  INFO 14688 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-07-24 15:29:37.889  INFO 14688 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-24 15:29:37.897  INFO 14688 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-24 15:29:37.951  INFO 14688 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-07-24 15:29:38.022  INFO 14688 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2020-07-24 15:29:38.025  INFO 14688 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-24 15:29:38.025  INFO 14688 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-24 15:29:38.046  INFO 14688 --- [main] c.zhongbenshuo.pepper.PepperApplication  : Started PepperApplication in 8.186 seconds (JVM running for 15.409)
+2020-07-24 15:29:38.053  INFO 14688 --- [main] c.zhongbenshuo.pepper.PepperApplication  : ************************************** 项目启动成功 **************************************
+2020-07-24 15:29:39.114  INFO 14688 --- [RMI TCP Connection(3)-192.168.2.133] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-24 15:29:39.114  INFO 14688 --- [RMI TCP Connection(3)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-24 15:29:39.123  INFO 14688 --- [RMI TCP Connection(3)-192.168.2.133] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-24 15:29:43.204  WARN 14688 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ZBSAttendance, managementUrl=http://DESKTOP-F2NLN99.lan:8888/actuator, healthUrl=http://DESKTOP-F2NLN99.lan:8888/actuator/health, serviceUrl=http://DESKTOP-F2NLN99.lan:8888/) at spring-boot-admin ([http://106.12.55.177:10086/instances]): I/O error on POST request for "http://106.12.55.177:10086/instances": Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out; nested exception is org.apache.http.conn.ConnectTimeoutException: Connect to 106.12.55.177:10086 [/106.12.55.177] failed: connect timed out. Further attempts are logged on DEBUG level
+2020-07-24 15:30:16.758  INFO 14688 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:30:40.258  INFO 14688 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:30:43.728  INFO 14688 --- [http-nio-8888-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:30:57.926  INFO 14688 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:31:16.317  INFO 14688 --- [http-nio-8888-exec-10] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:31:30.623  INFO 14688 --- [http-nio-8888-exec-6] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:31:57.491  INFO 14688 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:31:59.548  INFO 14688 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:33:38.214  INFO 14688 --- [http-nio-8888-exec-9] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:33:50.864  INFO 14688 --- [http-nio-8888-exec-5] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:33:59.763  INFO 14688 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:34:39.272  INFO 14688 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:35:48.521  INFO 14688 --- [http-nio-8888-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:36:00.473  INFO 14688 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:39:21.398  INFO 14688 --- [http-nio-8888-exec-10] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:39:32.201  INFO 14688 --- [http-nio-8888-exec-6] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:40:09.206  INFO 14688 --- [http-nio-8888-exec-7] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 15:40:23.592  INFO 14688 --- [http-nio-8888-exec-4] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 16:41:01.662  INFO 14688 --- [http-nio-8888-exec-1] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 16:41:28.203  INFO 14688 --- [http-nio-8888-exec-3] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 16:41:42.666  INFO 14688 --- [http-nio-8888-exec-2] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据
+2020-07-24 16:42:03.323  INFO 14688 --- [http-nio-8888-exec-8] c.z.pepper.controller.PepperDataQuery    : 查询环境检测仪数据

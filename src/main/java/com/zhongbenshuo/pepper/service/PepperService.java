@@ -25,4 +25,6 @@ public interface PepperService {
     Result querySelfIntroduction();
 
     Result queryAskSentence();
+
+    Result queryEnvironment(String station, String type);
 }

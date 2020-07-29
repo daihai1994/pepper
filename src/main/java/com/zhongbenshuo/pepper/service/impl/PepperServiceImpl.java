@@ -3,6 +3,7 @@ package com.zhongbenshuo.pepper.service.impl;
 import com.zhongbenshuo.pepper.model.*;
 import com.zhongbenshuo.pepper.mapper.PepperMapper;
 import com.zhongbenshuo.pepper.service.PepperService;
+import com.zhongbenshuo.pepper.utils.StationUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
@@ -173,6 +174,34 @@ public class PepperServiceImpl implements PepperService {
             result.setCode(ErrorCode.FAIL);
             result.setData(new ArrayList<String>());
             log.error("queryAskSentence查询询问语句异常：" + e.getMessage());
+        }
+        return result;
+    }
+
+    @Override
+    public Result queryEnvironment(String station, String type) {
+        Result result = new Result();
+        try {
+            String msg = "";
+            String stationName = StationUtil.StationField().get(station);
+            String typeName = StationUtil.EnvironmentField().get(type);
+            if(StringUtils.isEmpty(stationName)){
+                msg = "没有获取到房间是"+station+"的数据!";
+            }else if(StringUtils.isEmpty(typeName)){
+                msg = "没有获取到环境参数是"+type+"的数据!";
+            }else{
+               String data =  pepperMapper.queryEnvironment(stationName,typeName);
+               String level = StationUtil.level(type,Float.valueOf(data));
+               String units = StationUtil.EnvironmentUnits().get(type);
+                msg = station+"的"+type+":"+data+units+"   "+level;
+            }
+            result.setCode(ErrorCode.SUCCESS);
+            result.setData(msg);
+        } catch (Exception e) {
+            e.printStackTrace();
+            result.setCode(ErrorCode.FAIL);
+            result.setData("获取环境信息异常");
+            log.error("queryEnvironment查询环境信息异常：" + e.getMessage());
         }
         return result;
     }

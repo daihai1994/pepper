@@ -42,4 +42,8 @@
         select information from PepperSelfInfoAndAsk where type = 2
     </select>
 
+    <select id="queryEnvironment" resultType="String">
+        select ${type} from Environment where station = ${station}
+    </select>
+
 </mapper>

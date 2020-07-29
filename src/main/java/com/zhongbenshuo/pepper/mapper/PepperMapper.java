@@ -25,4 +25,6 @@ public interface PepperMapper {
     String querySelfIntroduction();
 
     List<String> queryAskSentence();
+
+    String queryEnvironment(String station, String type);
 }
